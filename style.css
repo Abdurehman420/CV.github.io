@@ -315,7 +315,7 @@ background-color: var(--primarycolor);
     }
 @media screen and (max-width:720px){
     body{
-        height: 200vh;
+        height: 250vh;
     }
     .container{
         grid-template-columns: 1fr 1fr;
