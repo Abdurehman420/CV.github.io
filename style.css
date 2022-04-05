@@ -1,0 +1,347 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+:root{
+    --primarycolor :rgb(255, 255, 30);
+    --defaultpara : 1.1rem;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.062);
+}
+.container{
+    width: 45%;
+    display: grid;
+   
+ grid-template-columns: 65% 35%;
+    
+    /* grid-column-gap: 3rem; */
+    background-color: white;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+    
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+MOBILE */
+
+
+
+
+
+
+.leftside{
+    background-color: rgba(0, 0, 0, 0.034);
+    padding: 3rem 3rem;
+}
+.cvhead h2{
+    font-size: 3rem;
+}
+.cvhead h2 span{
+    color: var(--primarycolor);
+}
+.cvhead h3{
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+.cvaddress{
+    width: 40%;
+    padding: 2rem 0;
+    display: flex;
+    line-height: 1.4;
+    align-items: center;
+   
+}
+.cvaddress p {
+    font-size:var(--defaultpara);
+}
+.cvico{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--primarycolor);
+    padding: .1rem;
+    border-radius: 3rem;
+}
+
+.cvico svg{
+    fill:var(--primarycolor);
+    padding: .5rem 0;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.cvadd{
+    font-size: var(--defaultpara);
+    padding: 0 2rem;
+}
+.secondaryheading{
+    font-size: 1.5rem;
+    color: var(--primarycolor);
+    padding: .3rem 0;
+    
+}
+.cv-profile p{
+    font-size: var(--defaultpara);
+    padding: .5rem 0;
+}
+
+.cv-experience{
+   padding-top: 1rem;
+}
+.cv-experience h6{
+    padding: .3rem 0;
+    font-size: 1.2rem;
+}
+
+.cv-experience p{
+    font-size: var(--defaultpara);
+}
+.cv-reference{
+    padding: 2rem 0;
+}
+.reference-content{
+    display: flex;
+    justify-content: space-between;
+}
+.reference-content ul{
+    list-style: none;
+    padding-top: .5rem;
+   
+}
+.reference-content span{
+    height: 5rem;
+    width: 1px;
+    border-right: 2px solid rgba(255, 0, 0, 0.171);
+}
+
+.reference-content li{
+    font-size: 1.1rem;
+    padding: .2rem 0;
+}
+
+
+
+
+
+.rightside{
+        grid-column: 2 / -1;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+.rightimg{
+    
+    padding: 3rem 0;
+    width: 12rem;
+        /* border-radius: 50%; */
+        position: relative;
+        /* overflow: hidden; */
+        
+    
+    }
+    .rightimg::before{
+        content: "";
+        position: absolute;
+        top: 2.6rem ;
+        left: 0rem;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+        transform: rotate(-60deg);
+        border-radius: 50%;
+        border: 5px solid transparent;
+        /* border-radius: 50%; */
+        /* background-color: var(--primarycolor);  */
+/* border-top: 5px solid var(--primarycolor); */
+border-right: 5px solid var(--primarycolor);
+/* animation: rotate 3s   linear infinite; */
+
+      
+
+}
+.rightimg span{
+        display: block;
+        position: absolute;
+        /* top: calc(50% - 2px); */
+        top: 70%;
+        left: -30%;
+        height: 3px;
+        width: 50%;
+        transform-origin: left;
+        /* background-color: var(--primarycolor); */
+        /* animation: rotate 3s  linear infinite; */
+    }
+    
+    .rightimg span::before{
+        content: "";
+        position: absolute;
+        right: -.7rem;
+        height: 1.7rem;
+        width: 1.7rem;
+        border-radius: 50%;
+        background-color: var(--primarycolor);
+        
+    }
+    @keyframes rotate{
+
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    /* .rightimg::after{
+        content: "";
+        position: absolute;
+        top: 12rem ;
+        left: .5rem;
+       
+        bottom: 0;
+        right: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+background-color: var(--primarycolor); 
+      
+
+} */
+
+ .rightimg img{
+        width:12rem ;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.158);
+        padding: 1.5rem;
+       
+        background: transparent;
+    }
+    
+    .languageandskill{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+
+    .cv-language ul{
+        color: var(--primarycolor);
+        list-style: none;
+        text-align: center;
+        
+    }
+    .cv-language li{
+        color: black;
+        
+        position: relative;
+        padding: 1rem 0;
+    }
+    .cv-language li::before{
+        content: "";
+        position: absolute;
+        
+        left: 0;
+        bottom: 1.3rem;
+        height: .5rem;
+        font-weight: bold;
+      
+        width: .5rem;
+        background-color: var(--primarycolor);
+        margin-left: .5rem;
+        
+
+    }
+    .cv-skills {
+        padding-top: 1.5rem;
+        
+
+    }
+
+    .cv-skills ul{
+        color: var(--primarycolor);
+        list-style: none;
+        text-align: center;
+        
+     
+    }
+    .cv-skills h3{
+        
+    }
+    .cv-skills li{
+        color: black;
+        /* list-style-type: square; */
+        position: relative;
+        padding: .5rem 0;
+    }
+    .cv-skills li::before{
+        content: "";
+        position: absolute;
+       top: .8rem;
+        left: 0;
+        bottom: 1.3rem;
+        height: .5rem;
+        font-weight: bold;
+       display: inline-block;
+        width: .5rem;
+        background-color: var(--primarycolor);
+        margin-left: .5rem;
+        
+
+    } 
+    
+    .education-content .ux{
+        padding: 2rem 0;
+    }
+    .education-content .designer{
+        padding: 1rem 0;
+    }
+    .education-content ul{
+        list-style: none;
+    }
+    .education-content ul li{
+        padding:.2rem;
+       font-size: var(--defaultpara);
+    }
+@media screen and (max-width:720px){
+    body{
+        height: 200vh;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content;
+
+       }
+       .leftside{
+           grid-column: 1 / -1;
+           grid-row: 1 / 2;
+           text-align: center;
+
+       }
+       .cvaddress{
+           width: 100%;
+           text-align: center;
+           
+       }
+       .cvadd{
+           padding: 0 .4rem;
+       }
+       .rightside{
+           grid-column: 1 / -1;
+           grid-row: 2 / -1;
+           text-align: center;
+
+       }
+
+}
+        
